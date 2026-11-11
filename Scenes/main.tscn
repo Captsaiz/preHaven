@@ -743,8 +743,12 @@ enemy = NodePath("../Enemy")
 shape = SubResource("WorldBoundaryShape2D_ebwwp")
 
 [node name="Enemy" parent="." unique_id=548790267 groups=["Spear"] instance=ExtResource("4_jjvhh")]
-position = Vector2(544, -212)
+position = Vector2(544, -461)
 scale = Vector2(0.3, 0.3)
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("5_kry3j")
+
+[connection signal="body_entered" from="Enemy/Area2D" to="Enemy" method="_on_area_2d_body_entered"]
+
+[editable path="Enemy"]
