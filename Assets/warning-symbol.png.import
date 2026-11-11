@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddxphjlpdr0r3"
-path="res://.godot/imported/Arrow.png-b8e6da00c37ab648b87d046a161ddee5.ctex"
+uid="uid://cb2b8wddoyd4s"
+path="res://.godot/imported/warning-symbol.png-6658d423b5c1d6baa2678a64dd8fda73.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Arrow.png"
-dest_files=["res://.godot/imported/Arrow.png-b8e6da00c37ab648b87d046a161ddee5.ctex"]
+source_file="res://Assets/warning-symbol.png"
+dest_files=["res://.godot/imported/warning-symbol.png-6658d423b5c1d6baa2678a64dd8fda73.ctex"]
 
 [params]
 
