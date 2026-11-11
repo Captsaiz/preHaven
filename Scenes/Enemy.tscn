@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://b5pwaencdapny"]
+
+[ext_resource type="Texture2D" uid="uid://bx7r2mn0as06q" path="res://Assets/Arrow-removebg.png" id="1_m1htj"]
+
+[node name="Enemy" type="CharacterBody2D" unique_id=548790267]
+position = Vector2(92, 21)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1005890771]
+position = Vector2(-103, -279)
+rotation = -3.9147735
+texture = ExtResource("1_m1htj")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1813312990]
+position = Vector2(49.98999, 50.899643)
+polygon = PackedVector2Array(-139.98999, -48.899643, -83.98999, -215.89964, -194.98999, -227.89964)
