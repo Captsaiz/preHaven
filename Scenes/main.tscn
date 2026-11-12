@@ -6,8 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://dphrrbhtuyu05" path="res://Scenes/Killzone.tscn" id="3_8gbba"]
 [ext_resource type="PackedScene" uid="uid://b5pwaencdapny" path="res://Scenes/Enemy.tscn" id="4_jjvhh"]
 [ext_resource type="Script" uid="uid://ccv607aqcmlhk" path="res://Scripts/enemy.gd" id="5_kry3j"]
-[ext_resource type="PackedScene" uid="uid://6ed8wx08em86" path="res://Scenes/Warning_Symbol.tscn" id="6_21xkr"]
-[ext_resource type="Script" uid="uid://c3173b8b0h8oc" path="res://Scripts/warning_symbol.gd" id="7_6bp64"]
+[ext_resource type="PackedScene" uid="uid://vdn3vyr5lib4" path="res://Scenes/Warning_Symbol.tscn" id="6_21xkr"]
+[ext_resource type="Script" uid="uid://b88pd5rv00srp" path="res://Scenes/warning_symbol.gd" id="8_344ge"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8gbba"]
 texture = ExtResource("2_bo1nx")
@@ -757,16 +757,14 @@ script = ExtResource("5_kry3j")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Enemy" unique_id=1380429891]
 
-[node name="Warning_Symbol" parent="." unique_id=1619241980 instance=ExtResource("6_21xkr")]
-position = Vector2(504, 255)
-scale = Vector2(0.8, 0.8)
-script = ExtResource("7_6bp64")
+[node name="Area2D" parent="." unique_id=409516098 instance=ExtResource("6_21xkr")]
+scale = Vector2(0.5, 0.5)
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("8_344ge")
 
-[connection signal="enemy_x_pos_reset" from="." to="Warning_Symbol" method="_on_main_enemy_x_pos_reset"]
 [connection signal="ready" from="Enemy" to="Enemy" method="_on_ready"]
 [connection signal="body_entered" from="Enemy/Area2D" to="Enemy" method="_on_area_2d_body_entered"]
-[connection signal="ready" from="Warning_Symbol" to="Warning_Symbol" method="_on_ready"]
-[connection signal="body_entered" from="Warning_Symbol/Area2D" to="Warning_Symbol" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 
 [editable path="Enemy"]
-[editable path="Warning_Symbol"]

@@ -8,8 +8,12 @@ func _ready() -> void:
 
 func _on_enemy_x_pos_reset(new_x: float) -> void:
 	global_position = Vector2(new_x, 255)
+	visible = true
 	
 
 
-# func _on_area_2d_body_entered(body: Node2D) -> void:
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.is_in_group("Spear"):
+		visible = false
+		
 	

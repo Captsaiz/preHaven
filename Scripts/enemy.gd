@@ -11,8 +11,9 @@ var speedAdder: float = 0.0
 var is_game_over: bool = false
 
 # Start reset_position during the first initialization	
-func _ready() -> void: 
-	reset_position.call_deferred(false)
+func _ready() -> void:
+	 
+	reset_position.call_deferred()
 
 func _physics_process(delta: float) -> void:
 	if is_game_over or get_tree().paused:
