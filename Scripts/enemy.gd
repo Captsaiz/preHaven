@@ -10,6 +10,10 @@ extends CharacterBody2D
 var speedAdder: float = 0.0
 var is_game_over: bool = false
 
+# Start reset_position during the first initialization	
+func _ready() -> void: 
+	reset_position.call_deferred(false)
+
 func _physics_process(delta: float) -> void:
 	if is_game_over or get_tree().paused:
 		return
@@ -22,6 +26,11 @@ func _physics_process(delta: float) -> void:
 
 func reset_position() -> void:
 	var random_x: float = randf_range(x_min, x_max)
+	
+	var root = get_tree().current_scene as MainScene
+	if root:
+		root.global_enemy_x_pos = random_x
+		root.enemy_x_pos_reset.emit(random_x)
 	
 	global_position = Vector2(random_x, start_position.y)
 	speedAdder += speed_increment
@@ -40,4 +49,3 @@ func trigger_game_over() -> void:
 	
 	get_tree().paused = false
 	get_tree().reload_current_scene()
-	

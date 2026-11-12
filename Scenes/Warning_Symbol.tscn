@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://6ed8wx08em86"]
+
+[ext_resource type="Texture2D" uid="uid://cb2b8wddoyd4s" path="res://Assets/warning-symbol.png" id="1_avdq6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x7yax"]
+size = Vector2(41, 6)
+
+[node name="Warning_Symbol" type="StaticBody2D" unique_id=1619241980]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2139832275]
+texture_filter = 2
+texture = ExtResource("1_avdq6")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=338330659]
+position = Vector2(0, -66)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1382064454]
+shape = SubResource("RectangleShape2D_x7yax")
