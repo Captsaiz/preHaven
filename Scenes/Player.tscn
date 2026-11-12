@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://chtjilbl15b68"]
 
 [ext_resource type="Script" uid="uid://poo0ng140vdb" path="res://Scripts/PlayerMovement.gd" id="1_88kja"]
-[ext_resource type="Texture2D" uid="uid://beaot30tq03bg" path="res://icon.svg" id="2_it8n0"]
+[ext_resource type="Texture2D" uid="uid://chljd5bvs8th1" path="res://Assets/player.png" id="2_kyqiw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ueaft"]
 size = Vector2(120, 115)
@@ -10,7 +10,10 @@ size = Vector2(120, 115)
 script = ExtResource("1_88kja")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=892033457]
-texture = ExtResource("2_it8n0")
+texture_filter = 3
+texture_repeat = 1
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("2_kyqiw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=104154495]
 shape = SubResource("RectangleShape2D_ueaft")
