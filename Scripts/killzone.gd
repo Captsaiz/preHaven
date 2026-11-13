@@ -7,6 +7,7 @@ func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		playerFell()
 	elif body.is_in_group("Spear"):
+		get_tree().call_group("main", "change_score", 1)
 		resetSpear(body)
 		
 func playerFell() -> void:
